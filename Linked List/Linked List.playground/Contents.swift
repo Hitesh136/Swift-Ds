@@ -13,7 +13,7 @@ class Node: Equatable {
     }
 }
 
-public class LinkList {
+public class LinkedList {
     var head: Node? = nil
     
     func insert(value: Int) {
@@ -38,7 +38,7 @@ public class LinkList {
 
 
 //Helper Method
-extension LinkList {
+extension LinkedList {
     func showAllValue() {
         print("Showing all values")
         guard let headNode = head, let headValue = headNode.value else {
@@ -53,7 +53,7 @@ extension LinkList {
         }
     }
     
-    func getCout(node: Node?) -> Int {
+    func getCount(node: Node?) -> Int {
         guard node != nil else {
             return 0
         }
@@ -63,8 +63,8 @@ extension LinkList {
 }
 
 //Search
-extension LinkList {
-
+extension LinkedList {
+    
     func search(node: Node?, key: Int) -> Bool {
         //        print(node?.value)
         if let valueNode = node {
@@ -120,7 +120,7 @@ extension LinkList {
         return mainPointer
     }
     
-    func getMiddle() -> Node?{
+    func getMiddle() -> Node? {
         guard let headNode = head else {
             print("List is empty")
             return nil
@@ -141,7 +141,7 @@ extension LinkList {
 }
 
 // MARK:- Loop
-extension LinkList {
+extension LinkedList {
     
     var hasLoop: Bool {
         guard let temp = head else {
@@ -168,7 +168,7 @@ extension LinkList {
 }
 
 //Remove
-extension LinkList {
+extension LinkedList {
     
     func remove(value: Int) {
         guard let headNode = head else {
@@ -231,11 +231,35 @@ extension LinkList {
     }
 }
 
+// MARK:- Palindrome
+extension LinkedList {
+    func isPalindrome() -> Bool {
+        var stack = [Int]()
+        let middle = self.getCount(node: head) / 2
+        
+        var currentNode: Node
+        if let headValue = head {
+            stack.append(headValue.value ?? -1)
+            currentNode = headValue
+        }
+        for i in 1...middle {
+            if let nodeValue = currentNode.value {
+                stack.append(nodeValue)
+            }
+        }
+        
+        if middle % 2 != 0 {
+            st
+        }
+    }
+}
 
-//let myLinkList = LinkList()
-//
-//myLinkList.insert(value: 1)
-//myLinkList.insert(value: 2)
-//myLinkList.insert(value: 3)
-//myLinkList.insert(value: 4)
-//myLinkList.insert(value: 5)
+
+
+let myLinkList = LinkList()
+
+myLinkList.insert(value: 1)
+myLinkList.insert(value: 2)
+myLinkList.insert(value: 3)
+myLinkList.insert(value: 4)
+myLinkList.insert(value: 5)
