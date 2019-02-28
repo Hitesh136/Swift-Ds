@@ -45,9 +45,24 @@ class BinaryTreeTestCase: XCTestCase {
         XCTAssertEqual(preOrderTraversal, [7, 1, 0, 5, 9, 8])
     }
     
-    func postOrderTraversal() {
+    func testPostOrderTraversal() {
         var postOrderTraversal = [Int]()
         tree.postOrderTraversal{ postOrderTraversal.append($0) }
         XCTAssertEqual(postOrderTraversal, [0, 5, 1, 8, 9, 7])
+    }
+    
+    func testSerialization() {
+        let serializeArray = [7, 1, 0, nil, nil, 5, nil, nil, 9, 8, nil, nil, nil]
+        let result = tree.serialize()
+        XCTAssertEqual(serializeArray, result)
+    }
+    
+    func testDeSerialization() {
+        let deSerializeArray = [7, 1, 0, nil, nil, 5, nil, nil, 9, 8, nil, nil, nil]
+        let deSerializeTree = tree.deSerialize(arr: deSerializeArray)
+        
+        var preOrderTraversalArray = [Int]()
+        deSerializeTree?.preOrderTraversal{ preOrderTraversalArray.append($0) }
+        XCTAssertEqual(preOrderTraversalArray, [7, 1, 0, 5, 9, 8])
     }
 }
