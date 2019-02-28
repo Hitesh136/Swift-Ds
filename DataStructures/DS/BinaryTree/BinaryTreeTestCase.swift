@@ -10,6 +10,18 @@ import Foundation
 import XCTest
 @testable import DS
 
+func deSerialize<T>(_ arr: inout [T?]) -> BinaryNode<T>? {
+    
+    guard let value = arr.removeLast() else {
+        return nil
+    }
+    
+    let newNode = BinaryNode(value: value)
+    newNode.leftChild = deSerialize(&arr)
+    newNode.rightChild = deSerialize(&arr)
+    return newNode
+}
+
 class BinaryTreeTestCase: XCTestCase {
     
     var tree: BinaryNode<Int> = {
@@ -58,8 +70,8 @@ class BinaryTreeTestCase: XCTestCase {
     }
     
     func testDeSerialization() {
-        let deSerializeArray = [7, 1, 0, nil, nil, 5, nil, nil, 9, 8, nil, nil, nil]
-        let deSerializeTree = tree.deSerialize(arr: deSerializeArray)
+        var deSerializeArray = Array([7, 1, 0, nil, nil, 5, nil, nil, 9, 8, nil, nil, nil].reversed())
+        let deSerializeTree = deSerialize(&deSerializeArray)
         
         var preOrderTraversalArray = [Int]()
         deSerializeTree?.preOrderTraversal{ preOrderTraversalArray.append($0) }

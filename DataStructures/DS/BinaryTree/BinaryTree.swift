@@ -52,42 +52,7 @@ extension BinaryNode {
             arr.append(nil)
         }
         return arr
-    }
-    
-    func deSerialize(arr: [Element?]) -> BinaryNode? {
-        var index = 0
-        
-        func configureNode(currentNode: BinaryNode) {
-            
-            if currentNode.leftChild == nil {
-                let value = arr[index]
-                index += 1
-                guard let newValue = value else {
-                    return
-                }
-                currentNode.leftChild = BinaryNode(value: newValue)
-                configureNode(currentNode: currentNode.leftChild!)
-            }
-            
-            if currentNode.rightChild == nil {
-                let value = arr[index]
-                index += 1
-                guard let newValue = value else {
-                    return
-                }
-                currentNode.rightChild = BinaryNode(value: newValue)
-                configureNode(currentNode: currentNode.rightChild!)
-            }
-        }
-        
-        guard let first = arr.first, let firstElement = first  else {
-            return nil
-        }
-        let newTree = BinaryNode(value: firstElement)
-        configureNode(currentNode: newTree)
-        
-        return newTree
-    }
+    } 
 }
 
 extension BinaryNode {
