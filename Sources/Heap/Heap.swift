@@ -27,7 +27,7 @@
 /// THE SOFTWARE.
 
 struct Heap<Element: Equatable> {
-  private var elements: [Element] = []
+  fileprivate var elements: [Element] = []
   let areSorted: (Element, Element) -> Bool
 
   init(_ elements: [Element], areSorted: @escaping (Element, Element) -> Bool) {
@@ -75,26 +75,41 @@ struct Heap<Element: Equatable> {
     return originalRoot
   }
 
-  mutating func siftDown(from index: Int) {
-    var parentIndex = index
-    while true {
-      let (leftIndex, rightIndex) = getChildIndices(ofParentAt: parentIndex)
-      var optionalParentSwapIndex: Int?
-      if leftIndex < count
-        && areSorted(elements[leftIndex], elements[parentIndex])
-      {
-        optionalParentSwapIndex = leftIndex
-      }
-      if rightIndex < count
-        && areSorted(elements[rightIndex], elements[optionalParentSwapIndex ?? parentIndex])
-      {
-        optionalParentSwapIndex = rightIndex
-      }
-      guard let parentSwapIndex = optionalParentSwapIndex else {
-        return
-      }
-      elements.swapAt(parentIndex, parentSwapIndex)
-      parentIndex = parentSwapIndex
+    mutating func siftDown(from index: Int, upto count: Int? = nil) {
+        
+        let count = count ?? self.count
+        var parentIndex = index
+        while true {
+            let (leftIndex, rightIndex) = getChildIndices(ofParentAt: parentIndex)
+            var optionalParentSwapIndex: Int?
+            if leftIndex < count
+                && areSorted(elements[leftIndex], elements[parentIndex])
+            {
+                optionalParentSwapIndex = leftIndex
+            }
+            if rightIndex < count
+                && areSorted(elements[rightIndex], elements[optionalParentSwapIndex ?? parentIndex])
+            {
+                optionalParentSwapIndex = rightIndex
+            }
+            guard let parentSwapIndex = optionalParentSwapIndex else {
+                return
+            }
+            elements.swapAt(parentIndex, parentSwapIndex)
+            parentIndex = parentSwapIndex
+        }
     }
-  }
+}
+
+extension Array where Element: Equatable {
+    
+    init(_ heap: Heap<Element>) {
+        
+        self = heap.elements
+        for index in heap.elements.indices.reversed() {
+            swapAt(0, index)
+            
+        }
+        
+    }
 }
