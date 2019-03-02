@@ -20,6 +20,8 @@
 		4A6D03092227A1080036CBA9 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D03082227A1080036CBA9 /* LinkedList.swift */; };
 		4AB84ADE222400DA006DFFCE /* DSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB84ADD222400DA006DFFCE /* DSTests.swift */; };
 		4AB84AE722241C99006DFFCE /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB84AE622241C99006DFFCE /* Queue.swift */; };
+		9DC8F9FC2228B120000D63FE /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8F9FB2228B120000D63FE /* BinarySearch.swift */; };
+		9DC8F9FF2228B6D0000D63FE /* BinarySearchTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8F9FD2228B6C8000D63FE /* BinarySearchTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		4AB84ADF222400DA006DFFCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AB84AE622241C99006DFFCE /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		4AB84AE822241E43006DFFCE /* QueueTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTestCase.swift; sourceTree = "<group>"; };
+		9DC8F9FB2228B120000D63FE /* BinarySearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		9DC8F9FD2228B6C8000D63FE /* BinarySearchTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		4A2BFA042223FADF007D5B5F /* DS */ = {
 			isa = PBXGroup;
 			children = (
+				9DC8F9FA2228B106000D63FE /* BinarySearch */,
 				4A6D030A2227AAE00036CBA9 /* LinkedList */,
 				4A55DF28222548250015CAB1 /* BinaryTree */,
 				4A55DF272225480F0015CAB1 /* QueueWithStack */,
@@ -159,6 +164,15 @@
 				4AB84ADF222400DA006DFFCE /* Info.plist */,
 			);
 			path = DSTests;
+			sourceTree = "<group>";
+		};
+		9DC8F9FA2228B106000D63FE /* BinarySearch */ = {
+			isa = PBXGroup;
+			children = (
+				9DC8F9FB2228B120000D63FE /* BinarySearch.swift */,
+				9DC8F9FD2228B6C8000D63FE /* BinarySearchTestCase.swift */,
+			);
+			path = BinarySearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC8F9FC2228B120000D63FE /* BinarySearch.swift in Sources */,
 				4A55DF3522254B300015CAB1 /* AppDelegate.swift in Sources */,
 				4A55DF3322254B2B0015CAB1 /* ViewController.swift in Sources */,
 				4A42E79922251C2F00CB3DA7 /* QueueStack.swift in Sources */,
@@ -276,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC8F9FF2228B6D0000D63FE /* BinarySearchTestCase.swift in Sources */,
 				4A55DF2D222548D10015CAB1 /* BinaryTreeTestCase.swift in Sources */,
 				4AB84ADE222400DA006DFFCE /* DSTests.swift in Sources */,
 				4A55DF2E222549A10015CAB1 /* StackTestCase.swift in Sources */,
@@ -427,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4F7SW76LL6;
 				INFOPLIST_FILE = DS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,6 +462,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4F7SW76LL6;
 				INFOPLIST_FILE = DS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
