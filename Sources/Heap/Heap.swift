@@ -1,15 +1,15 @@
 /// Copyright (c) 2019 Razeware LLC
-/// 
+///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-/// 
+///
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-/// 
+///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-/// 
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -27,54 +27,54 @@
 /// THE SOFTWARE.
 
 struct Heap<Element: Equatable> {
-  fileprivate var elements: [Element] = []
-  let areSorted: (Element, Element) -> Bool
-
-  init(_ elements: [Element], areSorted: @escaping (Element, Element) -> Bool) {
-    self.areSorted = areSorted
-    self.elements = elements
-
-    guard !elements.isEmpty else {
-      return
+    fileprivate var elements: [Element] = []
+    let areSorted: (Element, Element) -> Bool
+    
+    init(_ elements: [Element], areSorted: @escaping (Element, Element) -> Bool) {
+        self.areSorted = areSorted
+        self.elements = elements
+        
+        guard !elements.isEmpty else {
+            return
+        }
+        
+        for index in stride(from: elements.count / 2 - 1, through: 0, by: -1) {
+            siftDown(from: index)
+        }
     }
-
-    for index in stride(from: elements.count / 2 - 1, through: 0, by: -1) {
-      siftDown(from: index)
+    
+    var isEmpty: Bool {
+        return elements.isEmpty
     }
-  }
-
-  var isEmpty: Bool {
-    return elements.isEmpty
-  }
-
-  var count: Int {
-    return elements.count
-  }
-
-  func peek() -> Element? {
-    return elements.first
-  }
-
-  func getChildIndices(ofParentAt parentIndex: Int) -> (left: Int, right: Int) {
-    let leftIndex = (2 * parentIndex) + 1
-    return (leftIndex, leftIndex + 1)
-  }
-
-  func getParentIndex(ofChildAt index: Int) -> Int {
-    return (index - 1) / 2
-  }
-
-  mutating func removeRoot() -> Element? {
-    guard !isEmpty else {
-      return nil
+    
+    var count: Int {
+        return elements.count
     }
-
-    elements.swapAt(0, count - 1)
-    let originalRoot = elements.removeLast()
-    siftDown(from: 0)
-    return originalRoot
-  }
-
+    
+    func peek() -> Element? {
+        return elements.first
+    }
+    
+    func getChildIndices(ofParentAt parentIndex: Int) -> (left: Int, right: Int) {
+        let leftIndex = (2 * parentIndex) + 1
+        return (leftIndex, leftIndex + 1)
+    }
+    
+    func getParentIndex(ofChildAt index: Int) -> Int {
+        return (index - 1) / 2
+    }
+    
+    mutating func removeRoot() -> Element? {
+        guard !isEmpty else {
+            return nil
+        }
+        
+        elements.swapAt(0, count - 1)
+        let originalRoot = elements.removeLast()
+        siftDown(from: 0)
+        return originalRoot
+    }
+    
     mutating func siftDown(from index: Int, upto count: Int? = nil) {
         
         let count = count ?? self.count
@@ -99,17 +99,35 @@ struct Heap<Element: Equatable> {
             parentIndex = parentSwapIndex
         }
     }
+    
+    mutating func siftUp(form index: Int) {
+        var childIndex = index
+        while true {
+            let parentIndex = getParentIndex(ofChildAt: childIndex)
+            if parentIndex < count && areSorted(elements[childIndex], elements[parentIndex]) {
+                elements.swapAt(childIndex, parentIndex)
+                childIndex = parentIndex
+            } else {
+                return
+            }
+        }
+    }
+    
+    mutating func addElementAtLast(_ element: Element) {
+        elements.append(element)
+        siftUp(form: elements.count - 1)
+    }
 }
 
 extension Array where Element: Equatable {
     
     init(_ heap: Heap<Element>) {
-        
-        self = heap.elements
+        var heap = heap
         for index in heap.elements.indices.reversed() {
-            swapAt(0, index)
-            
+            heap.elements.swapAt(0, index)
+            heap.siftDown(from: 0, upto: index)
         }
-        
+        self = heap.elements
     }
 }
+

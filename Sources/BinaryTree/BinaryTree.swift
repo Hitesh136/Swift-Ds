@@ -52,7 +52,16 @@ extension BinaryNode {
             arr.append(nil)
         }
         return arr
-    } 
+    }
+    
+    func printLeftView(_  curentLevel: Int,_ maxLavel: inout Int,_ appendInArray: (Element) -> Void ) {
+        if curentLevel > maxLavel {
+            maxLavel = curentLevel
+            appendInArray(value)
+        }
+        leftChild?.printLeftView(curentLevel + 1, &maxLavel, appendInArray)
+        rightChild?.printLeftView(curentLevel + 1, &maxLavel, appendInArray)
+    }
 }
 
 extension BinaryNode {

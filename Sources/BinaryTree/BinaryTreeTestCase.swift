@@ -77,4 +77,15 @@ class BinaryTreeTestCase: XCTestCase {
         deSerializeTree?.preOrderTraversal{ preOrderTraversalArray.append($0) }
         XCTAssertEqual(preOrderTraversalArray, [7, 1, 0, 5, 9, 8])
     }
+    
+    func test_LeftView() {
+        var leftView = [Int]()
+        var maxLavel = 0
+        
+        tree.rightChild?.rightChild = BinaryNode(value: 55)
+        tree.rightChild?.rightChild?.rightChild = BinaryNode(value: 66)
+        print(tree.description)
+        tree.printLeftView(1, &maxLavel) { leftView.append($0) }
+        XCTAssertEqual(leftView, [7, 1, 0, 66])
+    }
 }
