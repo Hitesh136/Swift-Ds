@@ -31,6 +31,9 @@
 		4ACAC49E22293B0F0028ED06 /* QueueTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC48C222939E70028ED06 /* QueueTestCase.swift */; };
 		4ACAC49F22293B130028ED06 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC486222939D40028ED06 /* BinaryTree.swift */; };
 		4ACAC4A022293B160028ED06 /* BinaryTreeTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC487222939D40028ED06 /* BinaryTreeTestCase.swift */; };
+		9D3A15DF222DF7F8003E3768 /* BinaryTree+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A15DE222DF7F8003E3768 /* BinaryTree+Helper.swift */; };
+		9D4A2D21222D82A3009F732C /* Array+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A2D20222D82A3009F732C /* Array+Helper.swift */; };
+		9D4A2D23222D84A2009F732C /* ArrayTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A2D22222D84A2009F732C /* ArrayTestCase.swift */; };
 		OBJ_26 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_39 /* DataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DataStructures::DataStructures::Product" /* DataStructures.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +67,9 @@
 		4ACAC492222939F00028ED06 /* StackTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTestCase.swift; sourceTree = "<group>"; };
 		4ACAC49422293A0E0028ED06 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		4ACAC49622293A160028ED06 /* HeapTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapTestCase.swift; sourceTree = "<group>"; };
+		9D3A15DE222DF7F8003E3768 /* BinaryTree+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BinaryTree+Helper.swift"; sourceTree = "<group>"; };
+		9D4A2D20222D82A3009F732C /* Array+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Helper.swift"; sourceTree = "<group>"; };
+		9D4A2D22222D84A2009F732C /* ArrayTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTestCase.swift; sourceTree = "<group>"; };
 		"DataStructures::DataStructures::Product" /* DataStructures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DataStructures::DataStructuresTests::Product" /* DataStructuresTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 			children = (
 				4ACAC486222939D40028ED06 /* BinaryTree.swift */,
 				4ACAC487222939D40028ED06 /* BinaryTreeTestCase.swift */,
+				9D3A15DE222DF7F8003E3768 /* BinaryTree+Helper.swift */,
 			);
 			path = BinaryTree;
 			sourceTree = "<group>";
@@ -141,6 +148,15 @@
 			path = Heap;
 			sourceTree = "<group>";
 		};
+		9D4A2D1F222D8291009F732C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				9D4A2D20222D82A3009F732C /* Array+Helper.swift */,
+				9D4A2D22222D84A2009F732C /* ArrayTestCase.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +169,7 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				9D4A2D1F222D8291009F732C /* Array */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_9 /* Tests */,
@@ -263,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9D3A15DF222DF7F8003E3768 /* BinaryTree+Helper.swift in Sources */,
 				4ACAC49922293B030028ED06 /* Stack.swift in Sources */,
 				4ACAC49522293A0E0028ED06 /* Heap.swift in Sources */,
 				4ACAC49F22293B130028ED06 /* BinaryTree.swift in Sources */,
+				9D4A2D21222D82A3009F732C /* Array+Helper.swift in Sources */,
 				4ACAC49B22293B080028ED06 /* QueueStack.swift in Sources */,
 				4ACAC49D22293B0D0028ED06 /* Queue.swift in Sources */,
 			);
@@ -286,6 +305,7 @@
 				4ACAC49C22293B0B0028ED06 /* QueueStackTestCase.swift in Sources */,
 				4ACAC49A22293B050028ED06 /* StackTestCase.swift in Sources */,
 				4ACAC49822293AFB0028ED06 /* HeapTestCase.swift in Sources */,
+				9D4A2D23222D84A2009F732C /* ArrayTestCase.swift in Sources */,
 				4ACAC4A022293B160028ED06 /* BinaryTreeTestCase.swift in Sources */,
 				4ACAC49E22293B0F0028ED06 /* QueueTestCase.swift in Sources */,
 			);

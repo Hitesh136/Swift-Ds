@@ -88,4 +88,22 @@ class BinaryTreeTestCase: XCTestCase {
         tree.printLeftView(1, &maxLavel) { leftView.append($0) }
         XCTAssertEqual(leftView, [7, 1, 0, 66])
     }
+    
+    func test_1_isBST() {
+        XCTAssertTrue(tree.isBst())
+    }
+    
+    func test_2_isBST() {
+        let ten = BinaryNode(value: 10)
+        let seven = BinaryNode(value: 7)
+        let threeNine = BinaryNode(value: 39)
+        let eleven = BinaryNode(value: 11)
+        
+        ten.leftChild = seven
+        ten.rightChild = threeNine
+        
+        seven.rightChild = eleven
+        
+        XCTAssertTrue(ten.isBst())
+    }
 }
