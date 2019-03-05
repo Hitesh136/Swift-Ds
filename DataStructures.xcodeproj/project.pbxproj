@@ -169,7 +169,6 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				9D4A2D1F222D8291009F732C /* Array */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_9 /* Tests */,
@@ -180,6 +179,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				9D4A2D1F222D8291009F732C /* Array */,
 				4ACAC493222939F60028ED06 /* Heap */,
 				4ACAC490222939F00028ED06 /* Stack */,
 				4ACAC48D222939ED0028ED06 /* QueueWithStack */,
