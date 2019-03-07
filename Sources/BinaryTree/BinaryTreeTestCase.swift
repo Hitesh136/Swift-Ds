@@ -107,3 +107,47 @@ class BinaryTreeTestCase: XCTestCase {
         XCTAssertTrue(ten.isBst())
     }
 }
+
+//MARK:- BottomView
+
+extension BinaryTreeTestCase {
+    
+    func test_1_printBottomView() {
+        let twenty = BinaryNode(value: 20)
+        
+        let eight = BinaryNode(value: 8)
+        twenty.leftChild = eight
+        
+        let twentyTwo = BinaryNode(value: 22)
+        twenty.rightChild = twentyTwo
+        
+        let five = BinaryNode(value: 5)
+        eight.leftChild = five
+        
+        let three = BinaryNode(value: 3)
+        eight.rightChild = three
+        
+        let four = BinaryNode(value: 4)
+        twentyTwo.leftChild = four
+        
+        let twentyFive = BinaryNode(value: 25)
+        twentyTwo.rightChild = twentyFive
+        
+        let ten = BinaryNode(value: 10)
+        three.leftChild = ten
+        
+        let fourtheen = BinaryNode(value: 14)
+        four.rightChild = fourtheen
+        
+        var arr = [Int]()
+        twenty.bottomView(visit: {arr.append($0)})
+        XCTAssertEqual(arr, [5, 10, 4, 14, 25])
+    }
+    
+    func testSpiralTraversal() {
+        var result = [Int]()
+        tree.spiralTraversal(root: tree, visit: { result.append($0) })
+        testVisualizeTree()
+        XCTAssertEqual(result, [7, 1, 9, 8, 5, 0])
+    }
+}

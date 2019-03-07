@@ -18,6 +18,12 @@ class BinaryNode<Element> {
     }
 }
 
+extension BinaryNode: Equatable where Element: Equatable {
+    static func == (lhs: BinaryNode<Element>, rhs: BinaryNode<Element>) -> Bool {
+        return lhs.value == rhs.value
+    }
+}
+
 extension BinaryNode {
     func inOrderTraversal(visit: (Element) -> Void ) {
         leftChild?.inOrderTraversal(visit: visit)
@@ -53,6 +59,9 @@ extension BinaryNode {
         }
         return arr
     }
+}
+
+extension BinaryNode {
     
     func printLeftView(_  curentLevel: Int,_ maxLavel: inout Int,_ appendInArray: (Element) -> Void ) {
         if curentLevel > maxLavel {
@@ -61,6 +70,90 @@ extension BinaryNode {
         }
         leftChild?.printLeftView(curentLevel + 1, &maxLavel, appendInArray)
         rightChild?.printLeftView(curentLevel + 1, &maxLavel, appendInArray)
+    }
+}
+
+extension BinaryNode {
+    
+    /*
+     Bottom View of Binary Tree
+     https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
+     */
+    func bottomView(visit: (Element) -> Void) {
+        var map = [Int: [Element]]()
+        self.printBottomView(0) { (key, value) in
+            if var _ = map[key] {
+                map[key]?.append(value)
+            } else {
+                map[key] = [value]
+            }
+        }
+        for key in Array(map.keys).sorted() {
+            visit(map[key]!.last!)
+        }
+    }
+    
+    private func printBottomView(_ horizontalDistance: Int,_ visit: (Int, Element) -> ()) {
+        if let leftChild = leftChild {
+            visit(horizontalDistance - 1, leftChild.value)
+            leftChild.printBottomView(horizontalDistance - 1, visit)
+        }
+        
+        if let rightChild = rightChild {
+            visit(horizontalDistance + 1, rightChild.value)
+            rightChild.printBottomView(horizontalDistance + 1, visit)
+        }
+    }
+}
+
+extension BinaryNode where Element: Comparable {
+    
+    /*
+     Level order traversal in spiral form
+     https://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/
+     */
+    func spiralTraversal(root: BinaryNode?, visit: (Element) -> Void) {
+        guard let root = root else {
+            return
+        }
+        
+        var s1 = Stack<BinaryNode>()
+        var s2 = Stack<BinaryNode>()
+        
+        s1.push(root)
+        
+        while !s1.isEmpty() || !s2.isEmpty() {
+            while !s1.isEmpty() {
+                let top = s1.peek()!
+                s1.pop()
+                visit(top.value)
+                
+                if let rightChild = top.rightChild {
+                    s2.push(rightChild)
+                }
+                
+                if let leftChild = top.leftChild {
+                    s2.push(leftChild)
+                }
+            }
+            
+            while !s2.isEmpty() {
+                
+                let top = s2.peek()!
+                s2.pop()
+                visit(top.value)
+                
+                if let leftChild = top.leftChild {
+                    s1.push(leftChild)
+                }
+                
+                if let rightChild = top.rightChild {
+                    s1.push(rightChild)
+                }
+                
+            }
+        }
+        
     }
 }
 
