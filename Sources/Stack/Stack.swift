@@ -12,6 +12,7 @@ struct Stack<Element: Equatable>: Equatable {
     private var storage = [Element]()
     
     func isEmpty() -> Bool {
+
         return storage.isEmpty
     }
     
