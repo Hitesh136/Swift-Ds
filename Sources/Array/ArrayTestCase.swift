@@ -63,3 +63,35 @@ extension ArrayTestCase {
         XCTAssertEqual(result, [9, 9, 10, 10])
     }
 }
+
+// Reverse array in groups
+extension ArrayTestCase {
+    
+    func test1_reverseArrayOfGroup() {
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let res = [3, 2, 1, 6, 5, 4, 9, 8, 7]
+        
+        XCTAssertEqual(arr.reverseArrayOfGroup(k: 3), res)
+    }
+    
+    func test2_reverseArrayOfGroup() {
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+        let res = [5, 4, 3, 2, 1, 8, 7, 6]
+        
+        XCTAssertEqual(arr.reverseArrayOfGroup(k: 5), res)
+    }
+    
+    func test3_reverseArrayOfGroup() {
+        let arr = [1, 2, 3, 4, 5, 6]
+        let res = [1, 2, 3, 4, 5, 6]
+        
+        XCTAssertEqual(arr.reverseArrayOfGroup(k: 1), res)
+    }
+    
+    func test4_reverseArrayOfGroup() {
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8]
+        let res = [8, 7, 6, 5, 4, 3, 2, 1]
+        
+        XCTAssertEqual(arr.reverseArrayOfGroup(k: 10), res)
+    }
+}
