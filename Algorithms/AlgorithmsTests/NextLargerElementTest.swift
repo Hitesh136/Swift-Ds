@@ -1,5 +1,5 @@
 //
-//  AlgorithmsTests.swift
+//  NextLargerElementTest.swift
 //  AlgorithmsTests
 //
 //  Created by Hitesh Agarwal on 10/04/21.
@@ -8,8 +8,7 @@
 import XCTest
 @testable import Algorithms
 
-class AlgorithmsTests: XCTestCase {
-
+class NextLargerElementTest: XCTestCase {
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -18,9 +17,13 @@ class AlgorithmsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func test1() throws {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results. 
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let ip = [4, 5, 2, 25]
+        let op = ip.nextLargerElement()
+        let exp = [5, 25, 25, -1]
+        XCTAssertEqual(op, exp, "nextLargerElement failed")
     }
 
     func testPerformanceExample() throws {

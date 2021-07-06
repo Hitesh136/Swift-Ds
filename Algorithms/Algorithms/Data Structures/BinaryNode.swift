@@ -461,9 +461,9 @@ extension BinaryNode {
 //rootNode.rightChild?.leftChild = BinaryNode(value: 40)
 //rootNode.rightChild?.rightChild = BinaryNode(value: 20)
 
-
-var numbers = [1, 2, 2]
-var rootNode = BinaryNode(value: "")
-numbers.getPossibleStringsFromNumber(0, rootNode)
-print(rootNode.asString)
-print("Resluts: \(rootNode.getLeafValues())")
+//
+//var numbers = [1, 2, 2]
+//var rootNode = BinaryNode(value: "")
+//numbers.getPossibleStringsFromNumber(0, rootNode)
+//print(rootNode.asString)
+//print("Resluts: \(rootNode.getLeafValues())")

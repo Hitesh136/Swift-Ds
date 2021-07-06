@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0A3A4E2635B83000295244 /* MaximumIntervalOverlaping.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A3A4D2635B83000295244 /* MaximumIntervalOverlaping.swift */; };
+		FF0A3A532635BF6500295244 /* MaximumIntervalOverlapingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0A3A522635BF6500295244 /* MaximumIntervalOverlapingTest.swift */; };
 		FF70D8E426217F7B00322D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D8E326217F7B00322D7C /* AppDelegate.swift */; };
 		FF70D8E626217F7B00322D7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D8E526217F7B00322D7C /* SceneDelegate.swift */; };
 		FF70D8E826217F7B00322D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D8E726217F7B00322D7C /* ViewController.swift */; };
@@ -21,9 +23,11 @@
 		FF70D925262180CE00322D7C /* BinaryNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D91D262180CE00322D7C /* BinaryNode.swift */; };
 		FF70D926262180CE00322D7C /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D91E262180CE00322D7C /* Queue.swift */; };
 		FF70D927262180CE00322D7C /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D91F262180CE00322D7C /* Heap.swift */; };
-		FF70D928262180CE00322D7C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D920262180CE00322D7C /* main.swift */; };
 		FF70D929262180CE00322D7C /* Array+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D921262180CE00322D7C /* Array+Helper.swift */; };
 		FF70D92A262180CE00322D7C /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D922262180CE00322D7C /* LinkedList.swift */; };
+		FF70D935262185EB00322D7C /* NextLargerElementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D934262185EB00322D7C /* NextLargerElementTest.swift */; };
+		FF70D93B262189F600322D7C /* Josephus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D93A262189F600322D7C /* Josephus.swift */; };
+		FF70D94026218B6B00322D7C /* JosephusTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF70D93F26218B6B00322D7C /* JosephusTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF0A3A4D2635B83000295244 /* MaximumIntervalOverlaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumIntervalOverlaping.swift; sourceTree = "<group>"; };
+		FF0A3A522635BF6500295244 /* MaximumIntervalOverlapingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaximumIntervalOverlapingTest.swift; sourceTree = "<group>"; };
 		FF70D8E026217F7B00322D7C /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF70D8E326217F7B00322D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF70D8E526217F7B00322D7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +70,11 @@
 		FF70D91D262180CE00322D7C /* BinaryNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryNode.swift; sourceTree = "<group>"; };
 		FF70D91E262180CE00322D7C /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		FF70D91F262180CE00322D7C /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
-		FF70D920262180CE00322D7C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FF70D921262180CE00322D7C /* Array+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helper.swift"; sourceTree = "<group>"; };
 		FF70D922262180CE00322D7C /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		FF70D934262185EB00322D7C /* NextLargerElementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLargerElementTest.swift; sourceTree = "<group>"; };
+		FF70D93A262189F600322D7C /* Josephus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Josephus.swift; sourceTree = "<group>"; };
+		FF70D93F26218B6B00322D7C /* JosephusTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JosephusTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				FF70D8FD26217F7D00322D7C /* AlgorithmsTests.swift */,
+				FF70D934262185EB00322D7C /* NextLargerElementTest.swift */,
+				FF0A3A522635BF6500295244 /* MaximumIntervalOverlapingTest.swift */,
 				FF70D8FF26217F7D00322D7C /* Info.plist */,
+				FF70D93F26218B6B00322D7C /* JosephusTest.swift */,
 			);
 			path = AlgorithmsTests;
 			sourceTree = "<group>";
@@ -151,16 +162,25 @@
 		FF70D91A262180CE00322D7C /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				FF70D939262189EB00322D7C /* Array */,
 				FF70D91B262180CE00322D7C /* QueueStack.swift */,
 				FF70D91C262180CE00322D7C /* Stack.swift */,
 				FF70D91D262180CE00322D7C /* BinaryNode.swift */,
 				FF70D91E262180CE00322D7C /* Queue.swift */,
 				FF70D91F262180CE00322D7C /* Heap.swift */,
-				FF70D920262180CE00322D7C /* main.swift */,
 				FF70D921262180CE00322D7C /* Array+Helper.swift */,
 				FF70D922262180CE00322D7C /* LinkedList.swift */,
 			);
 			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		FF70D939262189EB00322D7C /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				FF70D93A262189F600322D7C /* Josephus.swift */,
+				FF0A3A4D2635B83000295244 /* MaximumIntervalOverlaping.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,12 +315,13 @@
 			files = (
 				FF70D927262180CE00322D7C /* Heap.swift in Sources */,
 				FF70D8E826217F7B00322D7C /* ViewController.swift in Sources */,
+				FF70D93B262189F600322D7C /* Josephus.swift in Sources */,
+				FF0A3A4E2635B83000295244 /* MaximumIntervalOverlaping.swift in Sources */,
 				FF70D8EE26217F7B00322D7C /* Algorithms.xcdatamodeld in Sources */,
 				FF70D8E426217F7B00322D7C /* AppDelegate.swift in Sources */,
 				FF70D926262180CE00322D7C /* Queue.swift in Sources */,
 				FF70D923262180CE00322D7C /* QueueStack.swift in Sources */,
 				FF70D92A262180CE00322D7C /* LinkedList.swift in Sources */,
-				FF70D928262180CE00322D7C /* main.swift in Sources */,
 				FF70D924262180CE00322D7C /* Stack.swift in Sources */,
 				FF70D8E626217F7B00322D7C /* SceneDelegate.swift in Sources */,
 				FF70D925262180CE00322D7C /* BinaryNode.swift in Sources */,
@@ -312,6 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0A3A532635BF6500295244 /* MaximumIntervalOverlapingTest.swift in Sources */,
+				FF70D94026218B6B00322D7C /* JosephusTest.swift in Sources */,
+				FF70D935262185EB00322D7C /* NextLargerElementTest.swift in Sources */,
 				FF70D8FE26217F7D00322D7C /* AlgorithmsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +420,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -457,6 +482,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
