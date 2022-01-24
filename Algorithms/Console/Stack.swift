@@ -43,6 +43,36 @@ extension Stack: CustomStringConvertible {
     }
 }
 
+extension Stack: Sequence {
+    struct StackIterator: IteratorProtocol {
+        var stack: Stack
+        
+        init(stack: Stack) {
+            self.stack = stack
+        }
+        
+        mutating func next() -> Element? {
+            return stack.pop()
+        }
+    }
+
+    
+    func makeIterator() -> StackIterator {
+        return StackIterator(stack: self)
+    }
+}
+
+extension Stack: ExpressibleByArrayLiteral {
+//    typealias ArrayLiteralElement = Element
+    
+    
+    init(arrayLiteral elements: Element...) {
+        self.init(withArray: elements)
+    }
+    
+}
+
+
 
 //https://www.geeksforgeeks.org/design-and-implement-special-stack-data-structure/
 //struct SpecialStack {
