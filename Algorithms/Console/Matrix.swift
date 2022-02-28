@@ -21,6 +21,17 @@ class Matrix {
             arr.append(jArr)
         }
     }
+    
+    init(_ comp: [[Int]]) {
+        self.arr = comp
+//        for i in comp.indices {
+//            var subArr = [Int]()
+//            for ele in comp {
+//                subArr.append(ele)
+//            }
+//            arr[i] = subArr
+//        }
+    }
     subscript(i: Int, j: Int) -> Int {
         get {
             let jArr = arr[i]
@@ -38,6 +49,8 @@ class Matrix {
             print(arr[i])
         }
     }
+    
+    
 }
 //let s1 = "bd".map{ String($0) }
 //let s2 = "abcd".map{ String($0) }
