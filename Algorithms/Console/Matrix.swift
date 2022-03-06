@@ -51,36 +51,50 @@ class Matrix {
     }
     
     
+    func reshapeArray(r: Int, c: Int) -> [[Int]] {
+//        https://leetcode.com/problems/reshape-the-matrix/
+        let size = arr.flatMap{ $0 }.count
+        var res = [[Int]]()
+        if r * c != size {
+            res = arr
+        } else {
+            
+            var tempRow = [Int]()
+            var count = 0
+            for row in arr {
+                for item in row {
+                    tempRow.append(item)
+                    count += 1
+                    
+                    if count == c {
+                        res.append(tempRow)
+                        tempRow = []
+                        count = 0
+                    }
+                    
+                }
+            }
+            
+        }
+        
+        return res
+    }
+    
+    func transformMatrix() {
+//    https://leetcode.com/problems/transpose-matrix/
+        for r in 0..<arr.count {
+            for c in 0..<arr[0].count {
+                
+                if c > r {
+                    if c < arr.count {
+                        if r < arr[c].count {
+                            let temp = self[r, c]
+                            self[r, c] = self[c, r]
+                            self[c, r] = temp
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-//let s1 = "bd".map{ String($0) }
-//let s2 = "abcd".map{ String($0) }
-//
-//let mat = Matrix(i: s1.count + 1, j: s2.count + 1, defaultValue: -1)
-//print(mat.arr)
-//for i in 0..<(s1.count + 1) {
-//    mat[i, 0] = 0
-//}
-//for j in 0..<(s2.count + 1) {
-//    mat[0, j] = 0
-//}
-////print(mat.arr)
-//func lcs(i: Int, j: Int) {
-//    if s1[i - 1] == s2[j - 1] {
-//        mat[i, j] = 1 + mat[i - 1, j - 1]
-//        print(s1[i - 1])
-//    } else {
-//        mat[i, j] = max(mat[i - 1, j], mat[i, j - 1])
-//    }
-//    mat.printMat()
-//    print("----")
-//}
-//
-//for i in 1..<s1.count + 1 {
-//    for j in 1..<s2.count + 1 {
-//        lcs(i: i, j: j)
-//    }
-//}
-//print(mat[s1.count, s2.count])
-//
-//
- 
