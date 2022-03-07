@@ -566,4 +566,288 @@ class Solution {
         }
         return count
     }
+    
+    func longestConsecutive(_ nums: [Int]) -> Int {
+//https://leetcode.com/problems/longest-consecutive-sequence/submissions/
+            var set = Set<Int>()
+            for num in nums {
+                set.insert(num)
+            }
+            
+            var res = 0
+            for num in nums {
+                if !set.contains(num - 1) {
+                    var temp = 0
+                    var j = num
+                    while set.contains(j) {
+                        j += 1
+                        temp += 1
+                    }
+                    
+                    res = max(temp, res)
+                }
+            }
+            return res
+        }
+    
+    func countNegatives(_ grid: [[Int]]) -> Int {
+//        https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/submissions/
+           var rowsCount = grid.count
+           var colCount = grid[0].count
+           var count = 0
+           for i in 0..<rowsCount {
+               var row = grid[i]
+               var j = colCount - 1
+               while j >= 0 && row[j] < 0 {
+                   count += 1
+                   j -= 1
+               }
+           }
+           return count
+       }
+    
+    func oddCells(_ m: Int, _ n: Int, _ indices: [[Int]]) -> Int {
+//        https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/submissions/
+            var grid = Array(repeating: Array(repeating: 0, count: n), count: m)
+            
+            for ind in indices {
+                var r = ind[0]
+                var c = ind[1]
+                
+                grid[r] = grid[r].map{ $0 + 1 }
+                var i = 0
+                while i < m {
+                    grid[i][c] += 1
+                    i += 1
+                }
+            }
+            
+            var count = 0
+            for row in grid {
+                for ele in row {
+                    if ele % 2 != 0 {
+                        count += 1
+                    }
+                }
+            }
+            return count
+        }
+    
+    func generate(_ numRows: Int) -> [[Int]] {
+//        https://leetcode.com/problems/pascals-triangle/submissions/
+            var res = [[Int]]()
+            var recentRow = [Int]()
+            var t = numRows
+            if t > 0 {
+                recentRow = [1]
+                res.append(recentRow)
+                t -= 1
+            }
+            
+            while t > 0 {
+                var nextRow = [1]
+                
+                var i = 0
+                while i + 1 < recentRow.count {
+                    var x = recentRow[i] + recentRow[i + 1]
+                    nextRow.append(x)
+                    i += 1
+                }
+                
+                nextRow.append(1)
+                res.append(nextRow)
+                recentRow = nextRow
+                t -= 1
+            }
+            return res
+        }
+    
+    func getRow(_ rowIndex: Int) -> [Int] {
+        var res = [[Int]]()
+        var recentRow = [Int]()
+        var t = rowIndex
+        if t > 0 {
+            recentRow = [1]
+            res.append(recentRow)
+            t -= 1
+        }
+        
+        while t > 0 {
+            var nextRow = [1]
+            
+            var i = 0
+            while i + 1 < recentRow.count {
+                var x = recentRow[i] + recentRow[i + 1]
+                nextRow.append(x)
+                i += 1
+            }
+            
+            nextRow.append(1)
+            res.append(nextRow)
+            recentRow = nextRow
+            t -= 1
+        }
+        return res.last!
+    }
+
+    func pascelTriangeII(_ rowIndex: Int) -> [Int] {
+//    https://leetcode.com/problems/pascals-triangle-ii/submissions/
+            var res = [[Int]]()
+            var recentRow = [Int]()
+            var t = rowIndex + 1
+            if t > 0 {
+                recentRow = [1]
+                res.append(recentRow)
+                t -= 1
+            }
+            
+            while t > 0 {
+                var nextRow = [1]
+                
+                var i = 0
+                while i + 1 < recentRow.count {
+                    let x = recentRow[i] + recentRow[i + 1]
+                    nextRow.append(x)
+                    i += 1
+                }
+                
+                nextRow.append(1)
+                res.append(nextRow)
+                recentRow = nextRow
+                t -= 1
+            }
+            return res.last!
+        }
+    
+    func findWords(_ words: [String]) -> [String] {
+//    https://leetcode.com/problems/keyboard-row/submissions/
+        let set1: Set<Character> = Set("qwertyuiop")
+        let set2: Set<Character> = Set("asdfghjkl")
+        let set3: Set<Character> = Set("zxcvbnm")
+        
+        var res = [String]()
+        
+        for _word in words {
+            let word = _word.lowercased()
+            var firstCount = 0
+            var secondCount = 0
+            var thiredCount = 0
+            for char in word {
+                if set1.contains(char) {
+                    firstCount += 1
+                }
+                if set2.contains(char) {
+                    secondCount += 1
+                }
+                if set3.contains(char) {
+                    thiredCount += 1
+                }
+            }
+            
+            if firstCount == _word.count || secondCount == _word.count || thiredCount == _word.count {
+                res.append(_word)
+            }
+        }
+        return res
+    }
+
+    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+//        https://leetcode.com/problems/remove-element/submissions/
+        var count = nums.count
+        var i = 0
+        var j = count - 1
+        while i < j {
+            if nums[i] == val {
+                nums.swapAt(i, j)
+                count -= 1
+                j -= 1
+            } else {
+                i += 1
+            }
+        }
+        
+        while nums.last! == val {
+            nums.removeLast()
+        }
+        return count
+    }
+    
+    func runningSum(_ _nums: [Int]) -> [Int] {
+        //    https://leetcode.com/problems/running-sum-of-1d-array/submissions/
+        var nums = _nums
+        var sum = nums[0]
+        
+        for i in 1..<nums.count {
+            sum += nums[i]
+            nums[i] = sum
+        }
+        return nums
+    }
+    
+    func getTwoLargestNumber(_ nums: [Int]) -> [Int] {
+//    https://www.geeksforgeeks.org/find-second-largest-element-array/
+        var first = 0
+        var second = 0
+        for num in nums {
+            if num > first {
+                second = first
+                first = num
+            } else if num < first && num > second {
+                second = num
+            }
+        }
+        return [second, first]
+    }
+    
+    func maxProduct(_ nums: [Int]) -> Int {
+//    https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
+        var first = 0
+        var second = 0
+        for num in nums {
+            if num > first {
+                second = first
+                first = num
+            } else if num <= first && num > second {
+                second = num
+            }
+        }
+        return (first - 1) * (second - 1)
+    }
+    
+    func xorOperation(_ n: Int, _ start: Int) -> Int {
+//        https://leetcode.com/problems/xor-operation-in-an-array/
+        var nums = Array(repeating: 0, count: n)
+        var res = 0
+        for i in 0..<nums.count {
+            let x = start + (2 * i)
+//            if i == 0 {
+//                res = x
+//            }
+            res ^= x
+            nums[i] = x
+        }
+        
+        return res
+    }
+    func numIdenticalPairs(_ nums: [Int]) -> Int {
+//    https://leetcode.com/problems/number-of-good-pairs/submissions/
+        var map = [Int: Int]()
+        
+        for (index, num) in nums.enumerated() {
+            if var value = map[num] {
+                map[num] = value + 1
+            } else {
+                map[num] = 1
+            }
+        }
+        
+        var count = 0
+        for key in map.keys {
+            if let value = map[key] {
+                count += (value * (value - 1)) / 2
+            }
+        }
+        return count
+    }
+    
 }
