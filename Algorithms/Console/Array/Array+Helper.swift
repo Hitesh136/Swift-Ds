@@ -850,4 +850,139 @@ class Solution {
         return count
     }
     
+    func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
+//    https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+            let max = candies.max()!
+            var res = [Bool]()
+            return candies.map{ ($0 + extraCandies) >= max }
+        }
+    
+    
+    func backspaceCompare(_ s: String, _ t: String) -> Bool {
+        //        https://leetcode.com/problems/backspace-string-compare/submissions/
+        
+        
+        var a1 = Array(s)
+        for i in 0..<a1.count {
+            let ele = a1[i]
+            if ele == "#" {
+                a1.remove(at: i)
+                if i > 0 {
+                    a1.remove(at: i - 1)
+                }
+            }
+        }
+        
+        var a2 = Array(t)
+        for i in 0..<a2.count {
+            let ele = a2[i]
+            if ele == "#" {
+                a2.remove(at: i)
+                if i > 0 {
+                    a2.remove(at: i - 1)
+                }
+            }
+        }
+        let s1 = a1.map{ String($0) }.joined()
+        let s2 = a2.map{ String($0) }.joined()
+        return s1 == s2
+    }
+    
+    func longestCommonPrefix(_ strs: [String]) -> String {
+//    https://leetcode.com/problems/longest-common-prefix/
+     
+        var res = ""
+        var i = 0
+        var firstWord = Array(strs[0])
+        while i < firstWord.count {
+            var notMatched = false
+            
+            var j = 1
+            while j < strs.count {
+                let word = Array(strs[j])
+                if i >= firstWord.count || i >= word.count || word[i] != firstWord[i] {
+                    notMatched = true
+                    break
+                }
+                j += 1
+            }
+            
+            if notMatched {
+                break
+            } else {
+                res += String(firstWord[i])
+            }
+            
+            i += 1
+        }
+        return res
+    }
+    
+    func groupAnagrams(_ _strs: [String]) -> [[String]] {
+        //        https://leetcode.com/problems/group-anagrams/
+        var res = [[String]]()
+        var strs = _strs
+        var i = 0
+        while i < strs.count {
+            var word = strs[i]
+            var wordSet = Set(Array(word))
+            var row = [word]
+            var j = i + 1
+            while j < strs.count {
+                
+                var _set = wordSet
+                var test = strs[j]
+                for char in test {
+                    _set.remove(char)
+                }
+                if _set.isEmpty {
+                    row.append(test)
+                    strs.remove(at: j)
+                } else {
+                    j += 1
+                }
+            }
+            res.append(row)
+            strs.remove(at: i)
+        }
+        return res
+    }
+    
+    func generateParenthesis(_ n: Int) -> [String] {
+//    https://leetcode.com/problems/generate-parentheses/submissions/
+        func printParenthesis(_ peren: String,
+                              _ o: Int,
+                              _ c: Int,
+                              _ n:Int,
+                              _ res: inout [String]) {
+            
+            if c > o {
+                return
+            }
+            
+            if c == o && c == n {
+                res.append(peren)
+            }
+            
+            if c < n {
+                printParenthesis(peren + ")", o, c + 1, n, &res)
+            }
+            
+            if o < n {
+                printParenthesis(peren + "(", o + 1, c, n, &res)
+                
+            }
+        }
+        
+        var res = [String]()
+        printParenthesis("(", 1, 0, n, &res)
+        return res
+    }
+    
+    func arrayStringsAreEqual(_ word1: [String], _ word2: [String]) -> Bool {
+        let str1 = word1.joined()
+        let str2 = word2.joined()
+        return str1 == str2
+        
+    }
 }

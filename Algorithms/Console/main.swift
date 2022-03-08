@@ -1,9 +1,9 @@
  import Foundation
   
-var nums1 = [1,2,3,1,1,3]
+var nums1 = ["","b"]
 //var val = 2
 
-print(Solution().numIdenticalPairs(nums1))
+print(Solution().generateParenthesis(3))
  
 //print(nums1)
 
