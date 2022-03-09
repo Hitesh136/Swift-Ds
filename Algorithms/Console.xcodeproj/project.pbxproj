@@ -17,6 +17,7 @@
 		FF3777352799DD9100AE0816 /* Array+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3777342799DD9100AE0816 /* Array+Helper.swift */; };
 		FF3777372799DE4B00AE0816 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3777362799DE4B00AE0816 /* LinkedList.swift */; };
 		FF447F3027C37D66006DAE4D /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF447F2F27C37D66006DAE4D /* Sort.swift */; };
+		FF485E2127D75D380047DDCB /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF485E2027D75D380047DDCB /* String+Helper.swift */; };
 		FF79B26E268AF19000AF1915 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79B26D268AF19000AF1915 /* Matrix.swift */; };
 		FFB870962687165900960072 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB870952687165900960072 /* main.swift */; };
 		FFF7B0AF2792A8210095E158 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF7B0AE2792A8210095E158 /* Helper.swift */; };
@@ -45,6 +46,7 @@
 		FF3777342799DD9100AE0816 /* Array+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Helper.swift"; sourceTree = "<group>"; };
 		FF3777362799DE4B00AE0816 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		FF447F2F27C37D66006DAE4D /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		FF485E2027D75D380047DDCB /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		FF79B26D268AF19000AF1915 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		FFB870922687165900960072 /* Console */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Console; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB870952687165900960072 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 			path = BitWise;
 			sourceTree = "<group>";
 		};
+		FF485E1F27D75D220047DDCB /* String */ = {
+			isa = PBXGroup;
+			children = (
+				FF485E2027D75D380047DDCB /* String+Helper.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		FFB870892687165900960072 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 			children = (
 				FFB870952687165900960072 /* main.swift */,
 				FF37772F2799DCA200AE0816 /* BitWise */,
+				FF485E1F27D75D220047DDCB /* String */,
 				FF37772A2799DC7700AE0816 /* Array */,
 				FF79B26D268AF19000AF1915 /* Matrix.swift */,
 				FFF7B0AE2792A8210095E158 /* Helper.swift */,
@@ -173,6 +184,7 @@
 			files = (
 				FFB870962687165900960072 /* main.swift in Sources */,
 				FF2EE337277A30CF003CA53D /* Stack.swift in Sources */,
+				FF485E2127D75D380047DDCB /* String+Helper.swift in Sources */,
 				FF3777332799DD4900AE0816 /* BinaryNode.swift in Sources */,
 				FF79B26E268AF19000AF1915 /* Matrix.swift in Sources */,
 				FF0CDA40273CF86600611710 /* TreeNode.swift in Sources */,

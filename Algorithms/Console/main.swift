@@ -1,9 +1,6 @@
  import Foundation
   
-var nums1 = ["","b"]
-//var val = 2
-
-print(Solution().generateParenthesis(3))
- 
-//print(nums1)
+var str = ["test.email+alex@leetcode.com", "test.email@leetcode.com"]
+print(Solution().numUniqueEmails(str))
+  
 
