@@ -18,7 +18,11 @@
 		FF3777372799DE4B00AE0816 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3777362799DE4B00AE0816 /* LinkedList.swift */; };
 		FF447F3027C37D66006DAE4D /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF447F2F27C37D66006DAE4D /* Sort.swift */; };
 		FF485E2127D75D380047DDCB /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF485E2027D75D380047DDCB /* String+Helper.swift */; };
+		FF485E2427D8E3850047DDCB /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF485E2327D8E3850047DDCB /* LRUCache.swift */; };
+		FF485E2627D9C7E20047DDCB /* MinStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF485E2527D9C7E20047DDCB /* MinStack.swift */; };
+		FF485E2827DA16AC0047DDCB /* MyHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF485E2727DA16AC0047DDCB /* MyHashMap.swift */; };
 		FF79B26E268AF19000AF1915 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79B26D268AF19000AF1915 /* Matrix.swift */; };
+		FF964AC127DB89E000A2A930 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF964AC027DB89E000A2A930 /* Math.swift */; };
 		FFB870962687165900960072 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB870952687165900960072 /* main.swift */; };
 		FFF7B0AF2792A8210095E158 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF7B0AE2792A8210095E158 /* Helper.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +51,11 @@
 		FF3777362799DE4B00AE0816 /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		FF447F2F27C37D66006DAE4D /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		FF485E2027D75D380047DDCB /* String+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
+		FF485E2327D8E3850047DDCB /* LRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
+		FF485E2527D9C7E20047DDCB /* MinStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinStack.swift; sourceTree = "<group>"; };
+		FF485E2727DA16AC0047DDCB /* MyHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHashMap.swift; sourceTree = "<group>"; };
 		FF79B26D268AF19000AF1915 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		FF964AC027DB89E000A2A930 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		FFB870922687165900960072 /* Console */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Console; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB870952687165900960072 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FFF7B0AE2792A8210095E158 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -90,6 +98,24 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		FF485E2227D8E3710047DDCB /* DesignParts */ = {
+			isa = PBXGroup;
+			children = (
+				FF485E2327D8E3850047DDCB /* LRUCache.swift */,
+				FF485E2527D9C7E20047DDCB /* MinStack.swift */,
+				FF485E2727DA16AC0047DDCB /* MyHashMap.swift */,
+			);
+			path = DesignParts;
+			sourceTree = "<group>";
+		};
+		FF964ABF27DB89D400A2A930 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				FF964AC027DB89E000A2A930 /* Math.swift */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
 		FFB870892687165900960072 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				FFB870952687165900960072 /* main.swift */,
+				FF964ABF27DB89D400A2A930 /* Math */,
+				FF485E2227D8E3710047DDCB /* DesignParts */,
 				FF37772F2799DCA200AE0816 /* BitWise */,
 				FF485E1F27D75D220047DDCB /* String */,
 				FF37772A2799DC7700AE0816 /* Array */,
@@ -185,12 +213,16 @@
 				FFB870962687165900960072 /* main.swift in Sources */,
 				FF2EE337277A30CF003CA53D /* Stack.swift in Sources */,
 				FF485E2127D75D380047DDCB /* String+Helper.swift in Sources */,
+				FF485E2627D9C7E20047DDCB /* MinStack.swift in Sources */,
 				FF3777332799DD4900AE0816 /* BinaryNode.swift in Sources */,
 				FF79B26E268AF19000AF1915 /* Matrix.swift in Sources */,
 				FF0CDA40273CF86600611710 /* TreeNode.swift in Sources */,
 				FF37772E2799DC9900AE0816 /* MaximumIntervalOverlaping.swift in Sources */,
 				FF3777372799DE4B00AE0816 /* LinkedList.swift in Sources */,
+				FF485E2827DA16AC0047DDCB /* MyHashMap.swift in Sources */,
 				FF37772C2799DC8500AE0816 /* Josephus.swift in Sources */,
+				FF964AC127DB89E000A2A930 /* Math.swift in Sources */,
+				FF485E2427D8E3850047DDCB /* LRUCache.swift in Sources */,
 				FF2EE335277A2D8A003CA53D /* Queue.swift in Sources */,
 				FFF7B0AF2792A8210095E158 /* Helper.swift in Sources */,
 				FF3777312799DCB000AE0816 /* Flipping Bits.swift in Sources */,
