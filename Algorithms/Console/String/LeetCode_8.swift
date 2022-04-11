@@ -1,6 +1,13 @@
+//
+//  LeetCode_8.swift
+//  Console
+//
+//  Created by Hitesh Agarwal on 11/04/22.
+//
+
 import Foundation
- 
-extension Solution {
+//https://leetcode.com/problems/string-to-integer-atoi/
+class LeetCode_8 {
     func myAtoi(_ s: String) -> Int {
         var res = 0
         var isNegative = false
@@ -26,16 +33,14 @@ extension Solution {
         
         while index < arr.count,
               let valueInInt = Int(String(arr[index])) {
-            
-            if index == 10 {
-                print("ss")
-            }
             let x = (res * 10) + valueInInt
             
-            if isNegative && (x * -1) > Int(Int32.min){
-                return Int(Int32.min)
-            } else if x > Int(Int32.max) {
-                return Int(Int32.max)
+            if x > Int(Int32.max) {
+                if isNegative {
+                    return Int(Int32.min)
+                }  else {
+                    return Int(Int32.max)
+                }
             } else {
                 res = x
             }
@@ -49,4 +54,3 @@ extension Solution {
         }
     }
 }
-print(Solution().myAtoi("21474836460"))
