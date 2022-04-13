@@ -1,7 +1,13 @@
-import Foundation
+//
+//  LeetCode_19.swift
+//  Console
+//
+//  Created by Hitesh Agarwal on 12/04/22.
+//
 
- 
-extension Solution {
+import Foundation
+//https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/
+class LeetCode_19 {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         var dummyNode: ListNode? = ListNode(0)
         
@@ -19,8 +25,6 @@ extension Solution {
         }
         
         left?.next = left?.next?.next
-        return head
+        return dummyNode?.next
     }
 }
-
-print(Solution().removeNthFromEnd(ListNode(1), 1))
