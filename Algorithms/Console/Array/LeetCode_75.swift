@@ -1,14 +1,21 @@
-import Foundation
- 
+//
+//  LeetCode_75.swift
+//  Console
+//
+//  Created by Hitesh Agarwal on 25/04/22.
+//
 
-extension Solution {
+import Foundation
+//https://medium.com/nerd-for-tech/75-sort-colors-15768309bf2f
+//https://leetcode.com/problems/sort-colors/
+class LeetCode_75 {
     func sortColors(_ nums: inout [Int]) {
         
         var start = 0
         var mid = 0
         var end = nums.count - 1
         
-        while mid < nums.count  {
+        while mid <= end  {
             let val = nums[mid]
             
             if val == 0 {
@@ -23,8 +30,5 @@ extension Solution {
             }
         }
     }
-}
 
-var arr = [2,0,2,1,1,0]
-print(Solution().sortColors(&arr))
-print(arr)
+}
