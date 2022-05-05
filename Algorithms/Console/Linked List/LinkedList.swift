@@ -189,34 +189,6 @@ extension LinkedList {
 //Remove
 extension LinkedList {
 
-    func remove(value: Int) {
-        guard let headNode = head else {
-            return
-        }
-
-        if headNode.value == value {
-            head = headNode.next
-            return
-        }
-
-        guard let nextNode = headNode.next else {
-            return
-        }
-
-        var iteratorNode = headNode
-        var previousNode = headNode
-        while let currentNode = iteratorNode.next {
-            if let curentValue = currentNode.value, curentValue == value {
-
-                previousNode.next = currentNode.next
-                break
-            } else {
-                iteratorNode = currentNode
-                previousNode = currentNode
-            }
-        }
-    }
-
     func delete(atPosition position: Int) {
         guard let headNode = head else {
             print("List is empty")
@@ -249,46 +221,8 @@ extension LinkedList {
         temp?.next = temp?.next?.next
     }
 }
-
-// MARK:- Palindrome
+ 
 extension LinkedList {
-
-}
-
-// MARK:- Reverse
-extension LinkedList {
-    func reverse() {
-        var prev: Node? = nil
-        var current: Node? = head
-        var next: Node? = nil
-
-        while let currentNode = current {
-            next = currentNode.next
-            if next == nil {
-                head = current
-            }
-            currentNode.next = prev
-
-            prev = currentNode
-            current = next
-        }
-    }
-
-    //Remove duplicates from a sorted linked list
-    func removeDuplicatesFromSortedLinkedList() {
-        var current = head
-        while current?.next != nil {
-            guard let _ = current?.next else {
-                return
-            }
-
-            if current?.next?.value == current?.value {
-                current?.next = current?.next?.next
-            }
-            current = current?.next
-        }
-    }
-
     //Remove duplicates from unsorted linked list
     func removeDuplicatesFromUnsortedLinkedList() {
         var current = head
@@ -350,23 +284,7 @@ extension LinkedList {
         currentY?.next = tempNext
     }
 
-    //Move last node to front of the linkedList
-    func moveLastToFront() {
-        let startNode = head
-        var lastNode = head
-        var secondLastNode: Node? = nil
-
-        while lastNode?.next != nil {
-            secondLastNode = lastNode
-            lastNode = lastNode?.next
-        }
-
-        head = lastNode
-        head?.next = startNode?.next
-
-        secondLastNode?.next = startNode
-        startNode?.next = nil
-    }
+    
 
     //Intersection of two Sorted Linked Lists
 
