@@ -428,7 +428,7 @@ extension Array where Element == Int {
     }
 }
 
-class Solution {
+extension Solution {
     func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
         var set = Set<Int>()
         for num in nums1 {

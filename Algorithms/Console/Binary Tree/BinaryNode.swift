@@ -78,20 +78,6 @@ extension BinaryNode {
         deQueue(queue: qu, append: append)
     }
     
-    func getHeight() -> Int {
-        var leftHeight = 0
-        var rightHeight = 0
-        
-        if let leftNode = self.leftChild {
-            leftHeight = leftNode.getHeight() + 1
-        }
-        
-        if let rightNode = self.rightChild {
-            rightHeight = rightNode.getHeight() + 1
-        }
-        
-        return max(leftHeight, rightHeight)
-    }
     
     func connecToNext() {
         self.leftChild?.nextChild = self.rightChild ?? self.nextChild?.leftChild ?? self.nextChild?.rightChild

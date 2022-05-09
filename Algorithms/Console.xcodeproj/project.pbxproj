@@ -82,6 +82,7 @@
 		FFF1423027E0DE7B0061BD8B /* 121.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1422F27E0DE7B0061BD8B /* 121.swift */; };
 		FFF1423227E0E0ED0061BD8B /* 1143.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF1423127E0E0ED0061BD8B /* 1143.swift */; };
 		FFF7B0AF2792A8210095E158 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF7B0AE2792A8210095E158 /* Helper.swift */; };
+		FFFC143728294489006F1781 /* Leetcode_104.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFC143628294489006F1781 /* Leetcode_104.swift */; };
 		FFFEFD482813ECB500326CB6 /* LeetCode_54.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEFD472813ECB500326CB6 /* LeetCode_54.swift */; };
 		FFFEFD4A2813FC6800326CB6 /* LeetCode_55.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFEFD492813FC6800326CB6 /* LeetCode_55.swift */; };
 /* End PBXBuildFile section */
@@ -175,6 +176,7 @@
 		FFF1422F27E0DE7B0061BD8B /* 121.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 121.swift; sourceTree = "<group>"; };
 		FFF1423127E0E0ED0061BD8B /* 1143.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1143.swift; sourceTree = "<group>"; };
 		FFF7B0AE2792A8210095E158 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		FFFC143628294489006F1781 /* Leetcode_104.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leetcode_104.swift; sourceTree = "<group>"; };
 		FFFEFD472813ECB500326CB6 /* LeetCode_54.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_54.swift; sourceTree = "<group>"; };
 		FFFEFD492813FC6800326CB6 /* LeetCode_55.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_55.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3777322799DD4900AE0816 /* BinaryNode.swift */,
+				FFFC143628294489006F1781 /* Leetcode_104.swift */,
 				FF0CDA3F273CF86600611710 /* TreeNode.swift */,
 				FF964AC327DF4E9400A2A930 /* BinaryTree.swift */,
 				FF5BF96D28182A6A00B5C901 /* LeetCode_94.swift */,
@@ -455,6 +458,7 @@
 				FF6C4CA1281AE8DE00850B0C /* LeetCode_206.swift in Sources */,
 				FF37772E2799DC9900AE0816 /* MaximumIntervalOverlaping.swift in Sources */,
 				FF3777372799DE4B00AE0816 /* LinkedList.swift in Sources */,
+				FFFC143728294489006F1781 /* Leetcode_104.swift in Sources */,
 				FF485E2827DA16AC0047DDCB /* MyHashMap.swift in Sources */,
 				FF3FCBD5281471850074F52A /* LeetCode_69.swift in Sources */,
 				FF1FE2262812D1E6006CF2C3 /* LeetCode_633.swift in Sources */,

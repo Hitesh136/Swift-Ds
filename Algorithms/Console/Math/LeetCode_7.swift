@@ -22,3 +22,4 @@ class LeetCode_7 {
         return res
     }
 }
+
