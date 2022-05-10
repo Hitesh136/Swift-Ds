@@ -6,17 +6,19 @@
 //
 
 import Foundation
+//https://www.youtube.com/watch?v=3Hdmv_Ym8PI
+//https://leetcode.com/problems/factorial-trailing-zeroes/
 
 class LeetCode_172 {
     
     func trailingZeroes(_ n: Int) -> Int {
-//    https://leetcode.com/problems/factorial-trailing-zeroes/
-           var res = 0
-           var x = 5
-           while n / x >= 1 {
-               res += n / x
-               x *= 5
-           }
-           return res
-       }
+        var res = 0
+        var x = n
+        while x >= 5 {
+            res += (x / 5)
+            x /= 5
+        }
+        return res
+    }
 }
+// Round 2 Completed next is LeetCode_728
