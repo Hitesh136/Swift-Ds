@@ -8,8 +8,6 @@
 import Foundation
 
 class LeetCode_728 {
-    
-    
      
      func selfDividingNumbers(_ left: Int, _ right: Int) -> [Int] {
  //        https://leetcode.com/problems/self-dividing-numbers/submissions/
@@ -44,3 +42,4 @@ class LeetCode_728 {
          }
     
 }
+// Round 2 Completed next is LeetCode_728
