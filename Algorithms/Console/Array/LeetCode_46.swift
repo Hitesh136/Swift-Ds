@@ -9,7 +9,7 @@ import Foundation
 
 //https://leetcode.com/problems/permutations/
 //https://www.youtube.com/watch?v=s7AvT7cGdSo&t=146s
-extension Solution {
+class LeetCode_46 {
     func permute(_ _nums: [Int]) -> [[Int]] {
             
         var result = [[Int]]()

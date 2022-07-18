@@ -9,9 +9,7 @@ import Foundation
 
 class LeetCode_1009 {
     
-
-     
-    
+ 
      func bitwiseComplement(_ N: Int) -> Int {
  //    https://leetcode.com/problems/complement-of-base-10-integer/submissions/
          guard N != 0 else { return 1 }

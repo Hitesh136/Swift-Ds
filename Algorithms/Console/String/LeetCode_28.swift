@@ -8,6 +8,7 @@
 import Foundation
 //https://leetcode.com/problems/implement-strstr/
 //https://github.com/soapyigu/LeetCode-Swift/blob/master/String/StrStr.swift
+//18 July 2022
 class LeetCode_28 {
     func strStr(_ haystack: String, _ needle: String) -> Int {
         guard !needle.isEmpty else { return 0 }

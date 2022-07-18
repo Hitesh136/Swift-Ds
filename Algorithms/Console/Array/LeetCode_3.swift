@@ -6,7 +6,7 @@
 //
 
 import Foundation
-extension Solution {
+class LeetCode_3 {
 //    https://leetcode.com/problems/longest-substring-without-repeating-characters/
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var arr = Array(s)

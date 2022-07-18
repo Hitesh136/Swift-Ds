@@ -8,7 +8,7 @@
 import Foundation
 
 
-extension Solution {
+class Solution {
     
     func preOrder(_ node: TreeNode?, res: inout [Int]) {
         guard node != nil else {

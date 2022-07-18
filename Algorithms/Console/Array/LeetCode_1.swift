@@ -8,7 +8,7 @@
 import Foundation
 
 //https://leetcode.com/problems/two-sum/submissions/
-extension Solution {
+class LeetCode_1 {
    func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
        var map = [Int: Int]()
        for (index, num) in nums.enumerated() {

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-extension Solution {
+class PartitionSubsetEqualSum {
     
      
      func canPartition_BadApproach(_ nums: [Int]) -> Bool {

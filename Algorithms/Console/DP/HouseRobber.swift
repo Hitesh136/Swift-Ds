@@ -7,8 +7,8 @@
 
 import Foundation
 //https://leetcode.com/problems/house-robber/submissions/
-extension Solution {
-    
+ 
+class HouseRobber {
     func rob(_ nums: [Int]) -> Int {
         var x = 0
         var x_1 = 0
@@ -21,4 +21,5 @@ extension Solution {
         
         return x
     }
+    
 }

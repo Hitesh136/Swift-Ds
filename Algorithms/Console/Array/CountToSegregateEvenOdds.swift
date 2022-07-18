@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Solution {
+class CountToSegregateEvenOdds {
     
    func countToSegregateEvenOdds(_ arr: inout [Int]) -> Int {
        //. Given an array arr[], write a function to count minimum number of swaps to segregate even or odd numbers. The functions should put all even number first, and then odd number.
