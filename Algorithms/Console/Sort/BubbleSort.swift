@@ -6,6 +6,11 @@
 //
 
 import Foundation
+
+struct Spaceship {
+    fileprivate(set) var name = "Serenity"
+}
+
 class BubbleSort {
     
 }

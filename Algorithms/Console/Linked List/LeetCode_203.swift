@@ -7,6 +7,7 @@
 
 import Foundation
 // https://leetcode.com/problems/remove-linked-list-elements/
+// 19 July 2022
 class LeetCode_203 {
     func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
         
