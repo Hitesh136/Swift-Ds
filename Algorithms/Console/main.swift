@@ -1,60 +1,37 @@
 import Foundation
  
  
+protocol Animal {
+    func makeSound()
+}
 
- 
-func counter() -> (Int) -> String {
-    var total = 5
-    func add(_ x: Int) -> String {
-        total += x + 1
-        return "\(total)"
+class Cat: Animal {
+    func makeSound() {
+        print("Cat is making Sound")
     }
-    return add
- }
- let f = counter()
- f(3)
- let g = counter()
- g(2)
- let r = f(4)
- print(r)
-//Options: -
-//    1. 10
-//    2. 14
-//    3. 17
-//    4. Compile time error. Memory Access error.
-//ANS: 14
-//
-//30. func test10(completion: @escaping (()-> Void)){
-//        print("01")
-//        DispatchQueue.main.async {
-//              print("02")
-//              completion()
-//        }
-//        print("03")
-//        completion()
-//        print("04")
-//   }
-//func runTest(){
-//        print("00")
-//        test10 {
-//          print("05")
-//        }
-//        print("06")
-//  }
-//DispatchQueue.main.async {
-//      runTest()
-//    }
-//    1. 00 01 03 05 04 06 02 05
-//    2. 00 01 02 05 03 05 04 06
-//    3. 00 01 02 03 04 05 06
-//    4. 00 01 02 05 06 03 05 06 04
-//    5. 00 01 03 05 06 02
-//Answer : 00 01 03 05 04 06 02 05
+}
+
+class Dog: Animal {
+    func makeSound() {
+        print("Dog is making sound")
+    }
+}
+
+class Play<T: Animal> {
+    func startGame(animals: [T]) {
+        for animal in animals {
+            animal.makeSound()
+        }
+    }
+}
+
+var animals: [Cat] = [Cat(), Cat()]
+var game = Play<Cat>()
+game.startGame(animals: animals)
+
+  
 //
 //
-//
-//
-//31.
 //class System {
 //   var os = "Mac" {
 //     willSet {

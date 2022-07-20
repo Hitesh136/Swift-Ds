@@ -7,6 +7,7 @@
 
 import Foundation
 //https://leetcode.com/problems/valid-parentheses/
+// 20 July 2022: Round 2
 class LeetCode_20 {
     func isValid(_ s: String) -> Bool {
             var stack = [Character]()

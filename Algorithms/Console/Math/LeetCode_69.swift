@@ -8,6 +8,7 @@
 import Foundation
 //https://leetcode.com/problems/sqrtx/
 //https://github.com/soapyigu/LeetCode-Swift/blob/master/Search/Sqrtx.swift
+// 20 July 2022 Round 2 
 class LeetCode_69 {
     func mySqrt(_ x: Int) -> Int {
         
