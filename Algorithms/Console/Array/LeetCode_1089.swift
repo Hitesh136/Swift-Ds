@@ -6,30 +6,18 @@
 //
 
 import Foundation
+// 21 July 2022: Round 2 done.
 class LeetCode_1089 {
-    
-}
-
-
-
-extension Array where Element == Int {
-
-    
-    mutating func duplicateZeros() -> [Int] {
-        // https://leetcode.com/problems/duplicate-zeros/
-        var index = 0
-        let _count = self.count
-        while index < _count {
-            
-            if self[index] == 0 {
-                self.insert(0, at: index)
-                index += 2
-            } else {
-                index += 1
+    func duplicateZeros(_ arr: inout [Int]) {
+        var i = 0
+        let count = arr.count
+        while i < count {
+            if arr[i] == 0 {
+                arr.insert(0, at: i)
+                arr.removeLast()
+                i += 1
             }
+            i += 1
         }
-        
-        let pre = self.prefix(_count)
-        return Array(pre)
     }
 }

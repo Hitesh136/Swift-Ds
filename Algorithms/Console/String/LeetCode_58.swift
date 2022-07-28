@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//25 July 2022: Round 2
 class LeetCode_58 {
     func lengthOfLastWord(_ s: String) -> Int {
         
@@ -27,5 +27,20 @@ class LeetCode_58 {
             return count
         }
   
-     
+    func lengthOfLastWord_2(_ s: String) -> Int {
+            var chars = Array(s)
+            var i = chars.count - 1
+            var end = chars.count - 1
+            while i >= 0 && chars[i] == " " {
+                i -= 1
+            }
+            end = i
+            while i >= 0 {
+                if chars[i] == " " {
+                    return end - i
+                }
+                i -= 1
+            }
+            return end - i
+        }
 }

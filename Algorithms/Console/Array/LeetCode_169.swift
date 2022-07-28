@@ -6,30 +6,23 @@
 //
 
 import Foundation
+// 21 July 2022: Round 2 done
 class LeetCode_169 {
-    
-}
-
-extension Array where Element == Int {
-      
-    
-    func majorityNumber() -> Int {
-//    https://leetcode.com/problems/majority-element/
-        var num = self[1]
-        var count = 1
-        let half = count / 2
-        for i in 0..<count {
-            let ele = self[i]
-            if ele == num {
-                count += 1
-                if count >= half {
+    func majorityElement(_ nums: [Int]) -> Int {
+        var map = [Int: Int]()
+        
+        var _count = nums.count
+        for num in nums {
+            if var val = map[num] {
+                val += 1
+                if val > (nums.count / 2) {
                     return num
                 }
+                map[num] = val
             } else {
-                num = ele
-                count = 1
+                map[num] = 1
             }
         }
-        return num
+        return nums[0]
     }
 }

@@ -6,29 +6,23 @@
 //
 
 import Foundation
-
+//https://leetcode.com/problems/max-consecutive-ones/
+// 21 July 2022: Round 2 done
 class LeetCode_485 {
-    
-}
-
-
-extension Array where Element == Int {
-
-   
-    
-    func getConsecutivOnes() -> Int {
-//        https://leetcode.com/problems/max-consecutive-ones/
-        var maxNow = 0
+    func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
+        var max = 0
         var maxSoFar = 0
-        for ele in self {
-            if ele == 0 {
-                maxNow = 0
-            } else if ele == 1 {
-                maxNow += 1
-                maxSoFar = Swift.max(maxNow, maxSoFar)
+        for num in nums {
+            if num == 1 {
+                max += 1
+                if max > maxSoFar {
+                    maxSoFar = max
+                }
+            } else {
+                max = 0
             }
         }
-        
         return maxSoFar
     }
 }
+

@@ -8,6 +8,7 @@
 import Foundation
 //https://leetcode.com/problems/first-missing-positive/
 //https://github.com/soapyigu/LeetCode-Swift/blob/master/Array/FirstMissingPositive.swift
+// 27 July 2022: Round 2
 class LeetCode_41 {
     func firstMissingPositive(_ nums: [Int]) -> Int {
         
@@ -21,4 +22,16 @@ class LeetCode_41 {
         
         return nums.count + 1
     }
+    
+    func firstMissingPositive2(_ nums: [Int]) -> Int {
+            
+            let nums = Set(nums)
+            var i = 1
+            while true {
+                if !nums.contains(i) {
+                    return i
+                }
+                i += 1
+            }
+        }
 }

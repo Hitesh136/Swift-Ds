@@ -6,6 +6,8 @@
 //
 
 import Foundation
+// 25 July 2022: Round 2
+//https://leetcode.com/problems/valid-anagram/submissions/
 class LeetCode_242 {
     func isAnagram(_ s: String, _ t: String) -> Bool {
             if s.count != t.count {
