@@ -6,26 +6,20 @@
 //
 
 import Foundation
+// 28 July 2022: Round 2
 extension Array where Element == Int {
-    
-   
-    
+     
     func findMaxSumOfSubSequence() -> Int {
-        var sumArray = self
-        var posArray = Array(0..<sumArray.count)
+        if let _max = self.max(), _max <= 0 {
+            return _max
+        }
         
-        for i in 1..<sumArray.count {
-            for j in 0..<i {
-                if self[j] < self[i] {
-                    sumArray[i] = Swift.max(sumArray[j], (self[i] + sumArray[j]))
-                    posArray[i] = j
-                }
+        var sum = 0
+        for ele in self {
+            if ele > 0 {
+                sum += ele
             }
         }
-        
-        if let maxValue = sumArray.max() {
-            return maxValue
-        }
-        return 0
+        return sum
     }
 }

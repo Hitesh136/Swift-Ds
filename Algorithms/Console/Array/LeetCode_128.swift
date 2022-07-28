@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// 28 July 2022: Round 2
 class LeetCode_128 {
     func longestConsecutive(_ nums: [Int]) -> Int {
 //https://leetcode.com/problems/longest-consecutive-sequence/submissions/
