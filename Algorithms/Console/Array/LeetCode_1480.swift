@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// 28 July 2022: Round 2
 class LeetCode_1480 {
     
     func runningSum(_ _nums: [Int]) -> [Int] {

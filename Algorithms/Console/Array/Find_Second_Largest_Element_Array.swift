@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// 29 July 2022: Round 2
 class Find_Second_Largest_Element_Array {
     
     func getTwoLargestNumber(_ nums: [Int]) -> [Int] {

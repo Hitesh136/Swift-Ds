@@ -6,32 +6,30 @@
 //
 
 import Foundation
+//https://leetcode.com/problems/pascals-triangle/submissions/
+// 29 July 2022: Round 2
 class LeetCode_118 {
     func generate(_ numRows: Int) -> [[Int]] {
-//        https://leetcode.com/problems/pascals-triangle/submissions/
-            var res = [[Int]]()
-            var recentRow = [Int]()
-            var t = numRows
-            if t > 0 {
-                recentRow = [1]
-                res.append(recentRow)
-                t -= 1
+            var res = [[1]]
+            var recentRow = [1]
+            
+            if numRows == 1 {
+                return res
             }
             
-            while t > 0 {
-                var nextRow = [1]
+            var t = 1
+            while t + 1 <= numRows {
                 
+                var temp = [1]
                 var i = 0
-                while i + 1 < recentRow.count {
-                    var x = recentRow[i] + recentRow[i + 1]
-                    nextRow.append(x)
+                while (i + 1) < recentRow.count {
+                    temp.append(recentRow[i] + recentRow[i + 1])
                     i += 1
                 }
-                
-                nextRow.append(1)
-                res.append(nextRow)
-                recentRow = nextRow
-                t -= 1
+                temp.append(1)
+                res.append(temp)
+                recentRow = temp
+                t += 1
             }
             return res
         }

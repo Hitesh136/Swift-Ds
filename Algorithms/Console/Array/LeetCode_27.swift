@@ -6,26 +6,27 @@
 //
 
 import Foundation
+//https://leetcode.com/problems/remove-element/submissions/
+// 29 July 2022: Round 2
 class LeetCode_27 {
     
     func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
-//        https://leetcode.com/problems/remove-element/submissions/
         var count = nums.count
         var i = 0
         var j = count - 1
-        while i < j {
-            if nums[i] == val {
-                nums.swapAt(i, j)
-                count -= 1
+        while i <= j {
+            if nums[j] == val {
                 j -= 1
-            } else {
+            }
+            else if nums[i] != val {
                 i += 1
+            } else {
+                nums.swapAt(i, j)
+                i += 1
+                j -= 1
             }
         }
-        
-        while nums.last! == val {
-            nums.removeLast()
-        }
-        return count
+        nums = Array(nums.prefix(i + 1))
+        return i
     }
 }

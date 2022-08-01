@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// 29 July 2022: Round 2
 class LeetCode_1486 {
     
     func xorOperation(_ n: Int, _ start: Int) -> Int {
