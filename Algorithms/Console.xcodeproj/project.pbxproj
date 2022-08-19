@@ -94,7 +94,6 @@
 		FFE0EBEE2834BF2700C002C3 /* SlidingWindowMaximum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBED2834BF2700C002C3 /* SlidingWindowMaximum.swift */; };
 		FFE0EBF02834BF6C00C002C3 /* ReverseArrayOfGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBEF2834BF6C00C002C3 /* ReverseArrayOfGroup.swift */; };
 		FFE0EBF22834BFCD00C002C3 /* KadensAlgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBF12834BFCD00C002C3 /* KadensAlgo.swift */; };
-		FFE0EBF42834BFE900C002C3 /* GetPossibleStringsFromNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBF32834BFE900C002C3 /* GetPossibleStringsFromNumber.swift */; };
 		FFE0EBF62834C0A700C002C3 /* LeetCode_268.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBF52834C0A700C002C3 /* LeetCode_268.swift */; };
 		FFE0EBF82834C0ED00C002C3 /* LeetCode_169.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBF72834C0ED00C002C3 /* LeetCode_169.swift */; };
 		FFE0EBFA2834C12700C002C3 /* LeetCode_1089.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0EBF92834C12700C002C3 /* LeetCode_1089.swift */; };
@@ -245,7 +244,6 @@
 		FFE0EBED2834BF2700C002C3 /* SlidingWindowMaximum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingWindowMaximum.swift; sourceTree = "<group>"; };
 		FFE0EBEF2834BF6C00C002C3 /* ReverseArrayOfGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseArrayOfGroup.swift; sourceTree = "<group>"; };
 		FFE0EBF12834BFCD00C002C3 /* KadensAlgo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KadensAlgo.swift; sourceTree = "<group>"; };
-		FFE0EBF32834BFE900C002C3 /* GetPossibleStringsFromNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPossibleStringsFromNumber.swift; sourceTree = "<group>"; };
 		FFE0EBF52834C0A700C002C3 /* LeetCode_268.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_268.swift; sourceTree = "<group>"; };
 		FFE0EBF72834C0ED00C002C3 /* LeetCode_169.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_169.swift; sourceTree = "<group>"; };
 		FFE0EBF92834C12700C002C3 /* LeetCode_1089.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_1089.swift; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 				FFE0EC012834C21100C002C3 /* LeetCode_674.swift */,
 				FFE0EC032834C26500C002C3 /* LeetCode_88.swift */,
 				FFE0EC052834C2BD00C002C3 /* LeetCode_922.swift */,
-				FFE0EBF32834BFE900C002C3 /* GetPossibleStringsFromNumber.swift */,
 				FFE0EBEB2834BE8800C002C3 /* SubArrayWithGivenSum.swift */,
 				FFE0EBE92834BE6D00C002C3 /* Sort012.swift */,
 				FFE0EBE52834BA9400C002C3 /* NextLargerElement.swift */,
@@ -631,7 +628,6 @@
 				FFE0EC262834C6CD00C002C3 /* LeetCode_119.swift in Sources */,
 				FF3777332799DD4900AE0816 /* BinaryNode.swift in Sources */,
 				FFE0EC1A2834C58100C002C3 /* LeetCode_1486.swift in Sources */,
-				FFE0EBF42834BFE900C002C3 /* GetPossibleStringsFromNumber.swift in Sources */,
 				FFE0EBEE2834BF2700C002C3 /* SlidingWindowMaximum.swift in Sources */,
 				FF1FE20C28129FAF006CF2C3 /* LeetCode_46.swift in Sources */,
 				FF6C4CA5281AEBF100850B0C /* LeetCode_203.swift in Sources */,

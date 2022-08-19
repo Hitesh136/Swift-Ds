@@ -6,33 +6,30 @@
 //
 
 import Foundation
+//https://practice.geeksforgeeks.org/problems/subarray-with-given-sum/0
+// 3 Aug 2022: Round 2
 class SubArrayWithGivenSum {
     
-}
-extension Array where Element: Numeric, Element: Comparable {
-    
-    /*
-     Subarray with given sum
-     https://practice.geeksforgeeks.org/problems/subarray-with-given-sum/0
-     */
-    
-    func subArray(withSum sum: Element) -> [Element] {
-        guard !self.isEmpty else {
-            return []
-        }
-        var total = self.first!
-        var lastIndex = 0
-        for i in 1..<self.count {
-            let ele = self[i]
-            total += ele
-            if total > sum {
-                total -= self[lastIndex]
-                lastIndex += 1
-            }
-            if total == sum {
-                return Array(self[lastIndex...i])
+    func getSum(sum: Int, ofArr arr: [Int]) -> (Int, Int) {
+        
+        var i = 0
+        var j = 1
+        var res = arr[i] + arr[j]
+        
+        while i < arr.count && j < arr.count {
+            
+            if res == sum {
+                return (i + 1, j + 1)
+            } else if res < sum {
+                j += 1
+                res += arr[j]
+            } else if res > sum {
+                res -= arr[i]
+                i += 1
             }
         }
-        return []
+        return (-1, -1)
     }
+    
+    
 }

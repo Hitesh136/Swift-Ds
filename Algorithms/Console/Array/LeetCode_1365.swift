@@ -6,21 +6,13 @@
 //
 
 import Foundation
+//https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+// 3 Aug 2022: Round 2
 class LeetCode_1365 {
-    
-}
-
-
-
-extension Array where Element == Int {
-  
-      
-    
-    mutating func smallerNumbersThanCurrent() {
-//    https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+    func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
         var counts = Array(repeating: 0, count: 101)
         
-        for ele in self {
+        for ele in nums {
             counts[ele] += 1
         }
         
@@ -31,8 +23,12 @@ extension Array where Element == Int {
             sum += temp
         }
         
-        for i in 0..<count {
-            self[i] = counts[self[i]]
+        var res = nums
+        for i in 0..<nums.count {
+            let ele = nums[i]
+            res[i] = counts[ele]
         }
+        return res
     }
 }
+ 

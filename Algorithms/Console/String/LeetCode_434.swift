@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// 16 Aug 2022: Round 2
 class LeetCode_434 {
     func countSegments(_ s: String) -> Int {
 //        https://leetcode.com/problems/number-of-segments-in-a-string/submissions/
