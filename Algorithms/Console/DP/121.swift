@@ -7,21 +7,22 @@
 
 import Foundation
 //https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-
+// round 2
 class Best_Time_To_Buy_And_Sell_Stock {
-    func maxProfit(_ prices: [Int]) -> Int {
-        var min = prices[0]
-        var profit = 0
-        for price in prices {
-            if price < min {
-                min = price
-            } else {
-                let newProfit = price - min
-                if newProfit > profit {
-                    profit = newProfit
-                }
+     
+    func maxProfit(prices: [Int]) -> Int {
+        guard prices.count > 0 else {return 0}
+        var maxProfit = 0
+        var buyDay = 0
+        
+        for i in 1 ..< prices.count {
+            let profit = prices[i] - prices[buyDay]
+            if profit < 0 {
+                buyDay = i
             }
+            maxProfit = max(profit, maxProfit)
         }
-        return profit
+        
+        return maxProfit
     }
 }

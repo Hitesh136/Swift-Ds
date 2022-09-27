@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// Round 2: 24 Aug 2022
 extension Solution {
     
     func uniquePaths_BadApproach(_ m: Int, _ n: Int) -> Int {
@@ -56,6 +57,37 @@ extension Solution {
         }
         return helper(m, n, &map)
     }
+    
+    // with dictionary
+    func uniquePaths_Memo(_ m: Int, _ n: Int) -> Int {
+            
+            var memo = [String: Int]()
+            
+            func helper(_ i: Int,_ j: Int) -> Int {
+                
+                if i < 0 || j < 0 {
+                    return 0
+                }
+                
+                if i == 0 && j == 0 {
+                    return 1
+                }
+                
+                let key = "\(i),\(j)"
+                if let value = memo[key] {
+                    return value
+                }
+                
+                let left = helper(i - 1, j)
+                let right = helper(i, j - 1)
+                
+                let res = left + right
+                memo[key] = res
+                return res
+            }
+            
+            return helper(m - 1, n - 1)
+        }
  
     
 }

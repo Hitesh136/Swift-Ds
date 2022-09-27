@@ -7,6 +7,7 @@
 
 import Foundation
 //https://leetcode.com/problems/remove-nth-node-from-end-of-list/submissions/
+
 class LeetCode_19 {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         var dummyNode: ListNode? = ListNode(0)

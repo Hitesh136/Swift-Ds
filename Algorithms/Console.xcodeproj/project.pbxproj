@@ -61,6 +61,8 @@
 		FF73BC012805D60A0092ABF0 /* LeetCode_26.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73BC002805D60A0092ABF0 /* LeetCode_26.swift */; };
 		FF73BC03280730FF0092ABF0 /* LeetCode_28.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF73BC02280730FF0092ABF0 /* LeetCode_28.swift */; };
 		FF79B26E268AF19000AF1915 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79B26D268AF19000AF1915 /* Matrix.swift */; };
+		FF7B788028BE1B8D009E12D9 /* LFUCache_Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B787F28BE1B8D009E12D9 /* LFUCache_Demo.swift */; };
+		FF7B788228BE50BD009E12D9 /* LFUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B788128BE50BD009E12D9 /* LFUCache.swift */; };
 		FF8EF9BE27FF13B9000F39A4 /* LeetCode_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EF9BD27FF13B9000F39A4 /* LeetCode_5.swift */; };
 		FF8EF9C02803FFB4000F39A4 /* LeetCode_7.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EF9BF2803FFB4000F39A4 /* LeetCode_7.swift */; };
 		FF8EF9C228041393000F39A4 /* LeetCode_8.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8EF9C128041393000F39A4 /* LeetCode_8.swift */; };
@@ -210,6 +212,8 @@
 		FF73BC002805D60A0092ABF0 /* LeetCode_26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_26.swift; sourceTree = "<group>"; };
 		FF73BC02280730FF0092ABF0 /* LeetCode_28.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_28.swift; sourceTree = "<group>"; };
 		FF79B26D268AF19000AF1915 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		FF7B787F28BE1B8D009E12D9 /* LFUCache_Demo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFUCache_Demo.swift; sourceTree = "<group>"; };
+		FF7B788128BE50BD009E12D9 /* LFUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFUCache.swift; sourceTree = "<group>"; };
 		FF8EF9BD27FF13B9000F39A4 /* LeetCode_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_5.swift; sourceTree = "<group>"; };
 		FF8EF9BF2803FFB4000F39A4 /* LeetCode_7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_7.swift; sourceTree = "<group>"; };
 		FF8EF9C128041393000F39A4 /* LeetCode_8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode_8.swift; sourceTree = "<group>"; };
@@ -434,6 +438,8 @@
 				FF485E2327D8E3850047DDCB /* LRUCache.swift */,
 				FF485E2527D9C7E20047DDCB /* MinStack.swift */,
 				FF485E2727DA16AC0047DDCB /* MyHashMap.swift */,
+				FF7B787F28BE1B8D009E12D9 /* LFUCache_Demo.swift */,
+				FF7B788128BE50BD009E12D9 /* LFUCache.swift */,
 			);
 			path = DesignParts;
 			sourceTree = "<group>";
@@ -658,6 +664,7 @@
 				FF54D23F28140B2F0052B59C /* LeetCode_56.swift in Sources */,
 				FFE0EBE82834BAF400C002C3 /* FindMaxSumOfSubSequence.swift in Sources */,
 				FFE0EC322834CA0D00C002C3 /* LeetCode_66.swift in Sources */,
+				FF7B788028BE1B8D009E12D9 /* LFUCache_Demo.swift in Sources */,
 				FF5BF96C2818163B00B5C901 /* LeetCode_79.swift in Sources */,
 				FFE0EBEC2834BE8800C002C3 /* SubArrayWithGivenSum.swift in Sources */,
 				FFE0EC2A2834C75D00C002C3 /* LeetCode_1252.swift in Sources */,
@@ -689,6 +696,7 @@
 				FFE0EBF22834BFCD00C002C3 /* KadensAlgo.swift in Sources */,
 				FF1FE2172812C1D0006CF2C3 /* MergeSort.swift in Sources */,
 				FF1FE2322812D2E0006CF2C3 /* LeetCode_2.swift in Sources */,
+				FF7B788228BE50BD009E12D9 /* LFUCache.swift in Sources */,
 				FF92146428045ED600C249ED /* LeetCode_11.swift in Sources */,
 				FFE0EBCC2833ECEB00C002C3 /* LeetCode_415.swift in Sources */,
 				FFE0EC0A2834C38200C002C3 /* LeetCode_238.swift in Sources */,
